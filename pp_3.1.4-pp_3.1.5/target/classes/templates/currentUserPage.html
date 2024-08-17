@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>User page</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
+</head>
+</head>
+<body>
+<header class="d-flex h-50 justify-content-between p-3  bg-dark">
+    <div><span class="text-white" id="userEmail">
+ with roles:
+    </span>
+        <span class="text-white" id="userRoles"></span>
+    </div>
+    <div>
+        <form action="/logout" method="POST">
+            <button class="text-light bg-dark border-0" type="submit">Logout</button>
+        </form>
+    </div>
+</header>
+<main class="d-flex h-100  vh-100 justify-content-between bg-light">
+    <div class="col-2  pt-3 bg-white">
+        <ul class="nav nav-pills d-flex w-100 flex-column" id="allUsersNavItem">
+        </ul>
+    </div>
+    <div class="col-9 bg-light me-5 h-100 pt-3">
+        <h1>
+            User information-page
+        </h1>
+        <div class="border border-1 rounded pt-2 ">
+            <p class="ps-3 pe-3 pb-2 border-bottom mb-0 fw-bold">About user</p>
+            <div class="pt-4 bg-white p-3">
+                <table class="bg-white w-100 ">
+
+                    <tr class="border-top lh-lg">
+                        <th class="ps-3">Id</th>
+                        <th>First name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                    <tr class="border-top bg-light lh-lg" id="userInfoTr">
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="/js/currentUserPageScript.js"></script>
+</body>
+</html>
